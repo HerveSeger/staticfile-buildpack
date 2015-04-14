@@ -73,6 +73,17 @@ Add a line to your `Staticfile` that begins with `directory:`
 directory: visible
 ```
 
+### Custom 404 Error Page
+
+To use a custom 404 error page, specify the filename in an [environment variable](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block) called CUSTOM_404. For example:
+
+```
+  env:
+    CUSTOM_404: error404.html 
+```
+
+If the file is not in the root folder of your project, include the relative path.
+
 ### Advanced Nginx configuration
 
 You can customise the Nginx configuration further, by adding `nginx.conf` and/or `mime.types` to your root folder.
